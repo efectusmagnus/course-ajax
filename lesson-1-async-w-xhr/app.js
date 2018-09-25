@@ -17,7 +17,7 @@
           requestError(err, 'image');
         };
         imgRequest.open('GET', `https://api.unsplash.com/search/photos?page=1&query=${searchedForText}`);
-        imgRequest.setRequestHeader('Authorization', 'Client-ID 462d22cae6dd1d4877bb082c9blabla');
+        imgRequest.setRequestHeader('Authorization', 'Client-ID 59af6bdaab7d846c1115e37a4ead4fe5ed0f9c8af72e3fffb16f3c9cfff21989');
         imgRequest.send();
 
         //`New York Times`
@@ -27,8 +27,8 @@
           requestError(err, 'articles');
         };
         articleRequest.open('GET', `http://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchedForText}`);
+        //This request does not work for NYTimes at the moment
         imgRequest.setRequestHeader('Authorization', 'Client-ID ada69d4ca05f447db02f342a7b80130f');
-        ada69d4ca05f447db02f342a7b80130f
         articleRequest.send();
     });
 
